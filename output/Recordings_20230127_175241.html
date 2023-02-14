@@ -1,0 +1,228 @@
+<HTML>
+    <HEAD>
+      <TITLE>Recordings Export!</TITLE>
+    </HEAD>
+	
+	<script>
+		function playrec() {
+							var errorCheck = arguments[0].startsWith("Error");
+							if(errorCheck)
+							{
+								alert(arguments[0].substr(6));
+							}
+							else
+							{					
+								var audioElement = document.getElementById('myAudio');
+								audioElement.setAttribute('src', arguments[0]);
+								audioElement.controls = true;							
+								var x = audioElement.controls; 							
+								audioElement.play();
+							}
+		}
+</script>
+
+<div id="topbar" style="height:100px;">
+
+	<div id="header" class="header" style="background-color:black;color: #f2f2f2;font-size: 20px;width: 100px;height:50px;margin: auto;float:left;">
+		<img src="Avaya.png"/>
+	</div>
+	
+	<div id="headertitle" class="headertitle" style="background-color:black;color: #f2f2f2;font-size: 20px;height:50px;margin: auto;">
+		<CENTER>
+			<label id="headertitle">IP OFFICE MEDIA MANAGER</label>
+		</CENTER>
+	</div>
+</div>
+
+<div align="center">
+<audio id="myAudio">
+  Upgrade Your browser.
+</audio>
+</div>
+
+
+	<style>
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		
+		#recordings {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 100%;
+		}
+
+		#recordings td, #recordings th {
+								
+								padding: 8px;
+					}		
+		table, tr, td{
+						border: 1px inset black;
+						border-collapse: collapse;
+						border-spacing: 0;
+						}
+				
+		table tr:nth-child(even) {
+								background-color: #f2f0f0 ;
+								}
+		table tr:nth-child(odd) {
+									background-color: #ffffff;
+									}
+		table th {
+					padding-top: 12px;
+					padding-bottom: 12px;
+					text-align: left;
+					background-color: #aeaeae;
+					color: black;
+					border: 1px inset black;
+					}
+
+	</style>
+
+    <BODY bgcolor="#ffffff">
+	<meta charset="UTF-8"> 
+      <LEFT>
+           
+      <BR/>
+      Displaying 10 Records.
+      <BR/>
+      
+      <TABLE style="width:100%" id="recordings">
+	    <tr>
+			<th>Call Date</th>
+			<th>Length</th>
+			<th>Parties</th>
+			<th>Call Direction</th>
+			<th>Agents</th>
+			<th>Owner</th>
+			<th>Targets</th>
+			<th>Skills</th>
+			<th>Call ID</th>
+			<th></th>
+		</tr>
+                  <TR>
+            <TD>1/27/23 5:51:25 PM</TD>
+            <TD>00:00:13</TD>
+            <TD>851(Luis) , 852 (LuisVantage)</TD>
+			<TD>Internal</TD>
+			<TD>851(Luis)</TD>
+            <TD>851</TD>
+            <TD>852</TD>
+			<TD>LuisVantage</TD>
+			<TD>01ac1f14e9080003ef</TD>
+			<TD><button title="Play" onclick="playrec('000000000000010.opus')"><img src="start.png"/></button></TD>
+          </TR>
+                  <TR>
+            <TD>1/27/23 5:51:25 PM</TD>
+            <TD>00:00:13</TD>
+            <TD>851(Luis) , 852 (LuisVantage)</TD>
+			<TD>Internal</TD>
+			<TD>852(LuisVantage)</TD>
+            <TD>852</TD>
+            <TD>852</TD>
+			<TD>LuisVantage</TD>
+			<TD>01ac1f14e9080003ef</TD>
+			<TD><button title="Play" onclick="playrec('000000000000009.opus')"><img src="start.png"/></button></TD>
+          </TR>
+                  <TR>
+            <TD>12/12/22 3:15:19 PM</TD>
+            <TD>00:00:11</TD>
+            <TD>null(Conf 852) , 852 (LuisVantage) , Conf - 852;851;</TD>
+			<TD>Internal</TD>
+			<TD>852(LuisVantage)</TD>
+            <TD>852</TD>
+            <TD>852</TD>
+			<TD>LuisVantage</TD>
+			<TD>03ac1f14e900e00002</TD>
+			<TD><button title="Play" onclick="playrec('000000000000008.opus')"><img src="start.png"/></button></TD>
+          </TR>
+                  <TR>
+            <TD>12/12/22 2:51:49 PM</TD>
+            <TD>00:00:05</TD>
+            <TD>851(Luis) , 852 (LuisVantage)</TD>
+			<TD>Internal</TD>
+			<TD>852(LuisVantage)</TD>
+            <TD>852</TD>
+            <TD>852</TD>
+			<TD>LuisVantage</TD>
+			<TD>01ac1f14e9700003f1</TD>
+			<TD><button title="Play" onclick="playrec('000000000000006.opus')"><img src="start.png"/></button></TD>
+          </TR>
+                  <TR>
+            <TD>12/12/22 2:51:49 PM</TD>
+            <TD>00:00:05</TD>
+            <TD>851(Luis) , 852 (LuisVantage)</TD>
+			<TD>Internal</TD>
+			<TD>851(Luis)</TD>
+            <TD>851</TD>
+            <TD>852</TD>
+			<TD>LuisVantage</TD>
+			<TD>01ac1f14e9700003f1</TD>
+			<TD><button title="Play" onclick="playrec('000000000000007.opus')"><img src="start.png"/></button></TD>
+          </TR>
+                  <TR>
+            <TD>12/12/22 2:50:25 PM</TD>
+            <TD>00:00:38</TD>
+            <TD>null(Conf 852) , 852 (LuisVantage) , Conf - 852;</TD>
+			<TD>Internal</TD>
+			<TD>852(LuisVantage)</TD>
+            <TD>852</TD>
+            <TD>852</TD>
+			<TD>LuisVantage</TD>
+			<TD>03ac1f14e900000001</TD>
+			<TD><button title="Play" onclick="playrec('000000000000005.opus')"><img src="start.png"/></button></TD>
+          </TR>
+                  <TR>
+            <TD>10/20/22 1:00:12 PM</TD>
+            <TD>00:00:14</TD>
+            <TD>851(Luis) , 852 (LuisVantage)</TD>
+			<TD>Internal</TD>
+			<TD>852(LuisVantage)</TD>
+            <TD>852</TD>
+            <TD>852</TD>
+			<TD>LuisVantage</TD>
+			<TD>01ac1f14e9100003f4</TD>
+			<TD><button title="Play" onclick="playrec('000000000000004.opus')"><img src="start.png"/></button></TD>
+          </TR>
+                  <TR>
+            <TD>10/20/22 1:00:12 PM</TD>
+            <TD>00:00:14</TD>
+            <TD>851(Luis) , 852 (LuisVantage)</TD>
+			<TD>Internal</TD>
+			<TD>851(Luis)</TD>
+            <TD>851</TD>
+            <TD>852</TD>
+			<TD>LuisVantage</TD>
+			<TD>01ac1f14e9100003f4</TD>
+			<TD><button title="Play" onclick="playrec('000000000000003.opus')"><img src="start.png"/></button></TD>
+          </TR>
+                  <TR>
+            <TD>10/20/22 12:53:16 PM</TD>
+            <TD>00:01:05</TD>
+            <TD>851(Luis) , 852 (LuisVantage)</TD>
+			<TD>Internal</TD>
+			<TD>852(LuisVantage)</TD>
+            <TD>852</TD>
+            <TD>852</TD>
+			<TD>LuisVantage</TD>
+			<TD>01ac1f14e9100003eb</TD>
+			<TD><button title="Play" onclick="playrec('000000000000001.opus')"><img src="start.png"/></button></TD>
+          </TR>
+                  <TR>
+            <TD>10/20/22 12:53:16 PM</TD>
+            <TD>00:01:05</TD>
+            <TD>851(Luis) , 852 (LuisVantage)</TD>
+			<TD>Internal</TD>
+			<TD>851(Luis)</TD>
+            <TD>851</TD>
+            <TD>852</TD>
+			<TD>LuisVantage</TD>
+			<TD>01ac1f14e9100003eb</TD>
+			<TD><button title="Play" onclick="playrec('000000000000002.opus')"><img src="start.png"/></button></TD>
+          </TR>
+              </TABLE>
+	  <LEFT>
+	  <CENTER>
+     <I>&#9400 2017 Avaya Inc. All Rights Reserved.</I>
+      <br>
+      </CENTER>
+ 
+    </BODY>
+  </HTML>
