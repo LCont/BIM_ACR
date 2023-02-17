@@ -27,9 +27,9 @@ import org.apache.commons.compress.utils.IOUtils;
 public class Descomprimir {
 	private static String prueba;
 	private static String[] recordings;
-	private static String INPUT_DIR = "/avaya/input/";
-	private static String UNZIP_DIR = "/avaya/temp/";
-	private static String CALLS_DIR = "/avaya/output";
+	private static String INPUT_DIR = "/avaya/zipped/";
+	private static String UNZIP_DIR = "/avaya/tars/";
+	private static String CALLS_DIR = "/avaya/recordings";
 
 	public Descomprimir() {
 		String[] recordings = null;
@@ -40,9 +40,9 @@ public class Descomprimir {
 		final String dir = System.getProperty("user.dir");
 		char currentChar = dir.charAt(1);
 		if (currentChar == ':') {
-			Descomprimir.INPUT_DIR = "D:\\Proyectos\\BIM_ACR\\input\\";
-			Descomprimir.UNZIP_DIR = "D:\\Proyectos\\BIM_ACR\\temp\\";
-			Descomprimir.CALLS_DIR = "D:\\Proyectos\\BIM_ACR\\output\\";
+			Descomprimir.INPUT_DIR = "D:\\Proyectos\\BIM_ACR\\zipped\\";
+			Descomprimir.UNZIP_DIR = "D:\\Proyectos\\BIM_ACR\\tars\\";
+			Descomprimir.CALLS_DIR = "D:\\Proyectos\\BIM_ACR\\recordings\\";
 		}
 		System.out.println("Carpeta para archivos de entrada " + INPUT_DIR);
 		// listar(INPUT_DIR);
