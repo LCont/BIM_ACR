@@ -13,10 +13,9 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class Renombrar {
-	private static String INPUT_DIR = "/avaya/input/";
-	private static String UNZIP_DIR = "/avaya/temp/";
-	private static String CALLS_DIR = "/avaya/output";
-
+	private static String INPUT_DIR = "/avaya/zipped/";
+	private static String UNZIP_DIR = "/avaya/tars/";
+	private static String CALLS_DIR = "/avaya/recordings";
 	//public String CALLS_DIR = "D:\\Proyectos\\BIM_ACR\\z3output\\";
 	//public String INPUT_DIR = "D:\\Proyectos\\BIM_ACR\\z1input\\";
 	//public String UNZIP_DIR = "D:\\Proyectos\\BIM_ACR\\z2temp\\";
@@ -25,19 +24,18 @@ public class Renombrar {
 		
 		// TODO Auto-generated constructor stub
 	}
-	public String getinputdir() {
-		return INPUT_DIR;
-	}
+
 
 	public static void main(String[] args) throws IOException {
 		final String dir = System.getProperty("user.dir");
         char currentChar = dir.charAt(1);
 		if (currentChar == ':') {
-			Renombrar.INPUT_DIR = "D:\\Proyectos\\BIM_ACR\\input\\";
-			Renombrar.UNZIP_DIR = "D:\\Proyectos\\BIM_ACR\\temp\\";
-			Renombrar.CALLS_DIR = "D:\\Proyectos\\BIM_ACR\\output\\";
+			Renombrar.INPUT_DIR = "D:\\Proyectos\\BIM_ACR\\zipped\\";
+			Renombrar.UNZIP_DIR = "D:\\Proyectos\\BIM_ACR\\tars\\";
+			Renombrar.CALLS_DIR = "D:\\Proyectos\\BIM_ACR\\recordings\\";
+			System.out.println("Windows zip dir: " + Renombrar.CALLS_DIR);
 		} else {
-			System.out.println("Linux " + Renombrar.CALLS_DIR);
+			System.out.println("Linux zip dir: " + Renombrar.CALLS_DIR);
 		}
 		
 		String mask = "*.html";
